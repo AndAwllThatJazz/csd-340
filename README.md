@@ -3,5 +3,5 @@ A Repo to document the processes and projects for CSD-340 (CSD340-T301 Web Devel
 
 # CSD 340 Web Development with HTML and CSS
 ## Contributors
-⋅⋅⋅⋅* Jazz Canty-Lane
-⋅⋅⋅⋅* Instructor: Pravin Bhandari
+* Jazz Canty-Lane
+* Instructor: Pravin Bhandari
