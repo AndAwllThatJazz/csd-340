@@ -1,0 +1,29 @@
+/* This is the main css file for Module 3 Assignment */
+/* Jazz Canty-Lane */
+/* 9/21/2025 */
+
+#container {
+    margin: 50px 100px 0 100px;
+}
+
+h1, h2, h3, h4 {
+    background-color: #ad4f01!important;
+    color: black;
+    border: 1px solid #D6A800;
+    padding: 10px;
+}
+
+a, li a {
+    color: #281518;
+    text-decoration: none;
+    transition: .3s all;
+}
+
+a:visited, li a:visited {
+    color: #5b2030; 
+}
+
+a:hover, li a:hover {
+    color: #a37870;
+}
+
