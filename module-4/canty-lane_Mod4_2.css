@@ -1,0 +1,45 @@
+h1 {
+    text-align: center;
+    color: rgba(79,54,116, .8)
+}
+
+h3 {
+    text-align: center;
+    color: rgba(214,168,2, .8)
+}
+
+div#image-gallery {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.imageGalleryDiv {
+    border: 1px solid #bc4815;
+}
+
+.imageGalleryDiv figure{
+    text-align: center;
+}
+
+.imageGalleryDiv figure img{
+    width: auto;
+    height: 25rem;
+}
+
+.imageGalleryDiv figcaption{
+    font-style: italic;
+    font-size: .75em;
+    color: rgba(46,87,14, .8);
+    text-align: center;
+}
+
+div.assignmentFooterExamplediv{
+    width: 100%;
+    margin-top: 60%;
+    margin-bottom: 10px;
+}
+
+div.assignmentFooterExamplediv a{
+    float: right;
+}
