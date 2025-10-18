@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+<meta http-equiv="author" content="Jazz Canty-Lane" />
+    <meta name="description" content="Assignment 9.3: JavaScript - Part 1" />
+<meta name="keywords" content="bellevue, html, css, web, development" />
+<meta name="robots" content="nofollow" />
+ <link rel="stylesheet" href="Canty-Lane_Mod9_3.css">
+ <script> 
+    var bellevueString = 'Bellevue';
+    var missouriString = 'Missouri';
+    var competitiveString = 'competitive';
+    var javascriptString = 'javascript';
+</script>
+</head>
+
+<body>
+<div id="container">
+    <h1>Assignment 9.3: JavaScript - Part 1</h1>
+
+    <h2>Chapter1: The boy who took CSD 340</h2>
+    <p class="intro">I'm very ecited to be finishing up my Computer Information Systems Degree at <span id="bellevue">__________</span> University. CSD-340 is the last 
+        course I need to take before I matriculate. It will (likely) be my last degree, but certainly not my first.
+    </p>
+    <p>In 2016, I graduated from the University of Central <span id="missouri">__________</span> with degrees in French and in Music. I can't say that I regret my initial
+        undergraduate studies, but I do wish sometimes that I had picked more lucrative fields. As far as French goes, I'd always had a knack
+        for speaking it (and the other romantic languages) and when my guidance counselors/advisors said it would pay off in the form of a job
+        as an interpreter and/or translator, I thought I was set. Unfortunately for my future, most French speakers in the corporate world are 
+        already fluent in English. To be a successful French interpreter, it is necessary to add additional languages to your lingual 
+        portfolio such as Arabic, Russian, Mandarin, or another language that compliments your skills. I wasn't in the market to learn 
+        another language but I had already done Study Abroad in France and was basically done with the degree, so it only made sense to 
+        finish it out.
+    </p>
+    <p>
+        My other natural talent was music. From a young age, I'd always taken to playing musical instruments, so my mother had me enrolled in 
+        piano lessons at 11 and clarinet lessons at 13. I took to the field like a fish to water. <span class="sentence">I played and competed
+        on Clarinet at the state and national level with the thought that I might make a living as a performer who plays on film scores; 
+        that was always the dream.</span> Little did I know that the world of professional orchestras would be so small and <span id="competitive">__________</span> 
+        (on one of the most common instruments, no less). Besides, with the way the world is today, I'd probably have to have a roster of 
+        private students just to make ends meet; great if you love it, but I've never been much of a teacher.
+    </p>
+    <p>
+        So, here I am, pursuing yet another Bachelor's degree: Computer Information Systems. Luckily for me, during my time at University
+        and my first couple jobs afterwards, I've developed an affinity for databases and organizing data and information into efficient
+        and navigable systems. While I started pursuing this additional degree out of necessity, I'm glad that I did. It is particularly
+        satisfying to see the course concepts I've seen discussed play a part in the work that I do. While I already have quite a bit of 
+        experience with HTML/CSS/<span id="javascript">__________</span> work, I'm excited to see what I can learn from this course to further improve my skillset.
+    </p>
+    <p>
+        <button type="button" onclick="document.getElementById('bellevue').innerHTML = bellevueString">Bellevue</button>
+    </p>
+    <p>
+        <button type="button" onclick="document.getElementById('missouri').innerHTML = missouriString">Missouri</button>
+    </p>
+    <p>
+        <button type="button" onclick="document.getElementById('competitive').innerHTML = competitiveString">Competitive</button>
+    </p>
+    <p>
+        <button type="button" onclick="document.getElementById('javascript').innerHTML = javascriptString">Javascript</button>
+    </p>
+    <hr/>
+    <address>
+        <p><a href="https://www.bellevue.edu" target="_blank" aria-label="link to Bellevue University Homepage">Bellevue University</a></p>
+        <p>1000 Galvin Road South</p>
+        <p>Bellevue, NE 68005</p>
+    </address>
+</div>
+
+
+</body>
+
+</html>

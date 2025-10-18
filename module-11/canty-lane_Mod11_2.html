@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <meta http-equiv="author" content="Jazz Canty-Lane" />
+    <meta name="description" content="Assignment: Module 11, Assignment 11.2" />
+    <meta name="keywords" content="bellevue, html, css, web, development" />
+    <meta name="robots" content="nofollow" />
+    <link rel="stylesheet" href="canty-lane__Mod11_2.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script>
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Assignment 11.2: JavaScript - Part 3</h1>
+    </header>
+
+    <div id="container">
+        <p>This is an interactive To Do List. Type in your first item in the text box, then click Add. Click the Display
+            button to see current items in the list.
+            Click on Delete Last Entry if you'd like to remove the last entry.
+        </p>
+        <ol id="myToDoList">
+
+        </ol>
+        <hr />
+        <input placeholder="Enter A Task" id="toDo_UserInput" type="text" />
+        <div class="actions">
+            <button type="button" id="addNewTask" class="toDo_actionButton" onclick="toDoList_add();">Add</button>
+            <button type="button" id="deleteLastTask" class="toDo_actionButton" onclick="toDoList_delete();">Delete Last
+                Entry</button>
+            <button type="button" id="displayAllTasks" class="toDo_actionButton"
+                onclick="toDoList_display();">Display</button>
+        </div>
+    </div>
+    <script>
+        let toDoTaskArray = [];
+
+        function confirmationAlert(taskContent) {
+            let arrayIndexPlacement = toDoTaskArray.length;
+            alert(`Item: ${taskContent} was added as item ${arrayIndexPlacement}. Click 'Display' to see updates.`);
+        }
+
+        function validateTaskInput(taskContent) {
+            if (taskContent.length > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function toDoList_add() {
+            let newTask = $('input#toDo_UserInput').val();
+            if (validateTaskInput(newTask)) {
+                toDoTaskArray.push(newTask);
+                confirmationAlert(newTask);
+                $('input#toDo_UserInput').val('');
+            } else {
+                alert('Please enter a task!');
+            }
+        }
+
+        function toDoList_delete() {
+            let taskToDelete = toDoTaskArray.pop();
+        }
+
+        function toDoList_clear() {
+            $('ol#myToDoList li').remove();
+        }
+
+        function toDoList_display() {
+            let toDoListElement = $('ol#myToDoList');
+            toDoList_clear();
+            $.each(toDoTaskArray, function (index, value) {
+                $(toDoListElement).append(`<li>${value}</li>`);
+            })
+        }
+
+
+    </script>
+</body>
+
+</html>

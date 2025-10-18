@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <meta http-equiv="author" content="Jazz Canty-Lane">
+    <meta name="description" content="Assignment: Module 3, Assignment 3.3">
+    <meta name="keywords" content="bellevue, html, css, web, development">
+    <meta name="robots" content="nofollow">
+    <link rel="stylesheet" href="Canty-Lane_Mod12_2.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Assignment 12.2: JavaScript - Part 4</h1>
+        <div id="myFavBooks" class="assignmentExampleDiv">
+            <h3>Top 10 Favorite Books</h3>
+            <div class="FavBookList_actions">
+            <button type="button" id="favBookList_asc" onclick="sortBooksAscending();"">Top to Bottom</button>
+            <button type="button" id="favBookList_desc" onclick="sortBooksDescending();"">Bottom to Top</button>
+        </div>
+        <hr/>
+            <ol id="topTenBooksList">
+                <li>A Wrinkle In Time</li>
+                <li>A Wind In The Door</li>
+                <li>The Magicians</li>
+                <li>Harry Potter and the Goblet of Fire</li>
+                <li>Angelology</li>
+                <li>Angelopolis</li>
+                <li>Private</li>
+                <li>The Last Olympian</li>
+                <li>New Moon</li>
+                <li>The Amber Spyglass</li>
+            </ol>
+        </div>
+        
+        <div id="thingsLearned" class="assignmentExampleDiv">
+            <h3>5 Things I’ve Learned Since the Course Started</h3>
+            <ul>
+                <li>More information about the Mac Terminal</li>
+                <li>How to sync ones local repository to a github repository</li>
+                <li>There is a desktop app to make the pushing repository changes to Github easier</li>
+                <li>You can publish your own website on Github!</li>
+                <li>Head meta tags don't require a trailing slash to close them</li>
+            </ul>
+        </div>
+
+        <div class="assignmentFooterExamplediv">
+            <a href="../index.html">Back to Landing Page</a>
+        </div>
+    </div>
+    <script>
+        const topTenBooksArray = [];
+        let topTenBooksLiElements = $('ol#topTenBooksList li');
+
+        $.each(topTenBooksLiElements, function(index, element){
+            let liContent = $(element).text();
+            topTenBooksArray.push(liContent);
+        });
+
+        function clearListElements(){
+            $('ol#topTenBooksList li').remove();
+        }
+
+        function sortBooksAscending(){
+            topTenBooksArray.sort();
+            clearListElements();
+            let topTenBooksOLList = $('ol#topTenBooksList');
+            $.each(topTenBooksArray, function (index, element){
+                $(topTenBooksOLList).append(`<li>${element}</li>`);
+            });
+        }
+
+        function sortBooksDescending(){
+            clearListElements();
+            let arrayLength = topTenBooksArray.length-1;
+            console.log('arrayLength: '+arrayLength);
+            for (let i = arrayLength; i > -1; i--){
+                $('ol#topTenBooksList').append(`<li>${topTenBooksArray[i]}</li>`);
+                console.log(topTenBooksArray[i]);
+                console.log(i);
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+/*Jazz Canty-Lane*/
+/* 9/21/2025 */
+/* Assignment 3.3 */
+
+div#container h1{
+    text-align: center;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+li{
+    font-weight: 300;
+}
+
+div.assignmentExampleDiv{
+    width: 45%;
+    display: inline-grid;
+}
+
+div#myFavBooks{
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+div#thingsLearned{
+    border: 1px dashed red;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+div#thingsLearned ul li{
+    list-style-type: upper-roman;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+div.assignmentFooterExamplediv{
+    width: 100%;
+    margin-top: 60%;
+    margin-bottom: 10px;
+}
+
+div.assignmentFooterExamplediv a{
+    float: right;
+}

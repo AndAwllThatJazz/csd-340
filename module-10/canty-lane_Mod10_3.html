@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <meta http-equiv="author" content="Jazz Canty-Lane" />
+    <meta name="description" content="Assignment: Module 10, Assignment 10.3" />
+    <meta name="keywords" content="bellevue, html, css, web, development" />
+    <meta name="robots" content="nofollow" />
+    <link rel="stylesheet" href="canty-lane__Mod10_3.css">
+
+    <script>
+        function displayImage(imageFile) {
+            var largerImage = document.getElementById("mainImage");
+            var newNode = document.createElement("img");
+            newNode.id = "mainImage";
+            newNode.src = imageFile;
+            newNode.alt = "Large Image";
+            newNode.className = "mainImage";
+            newNode.style.width = "300px";
+            newNode.style.height = "200px";
+            largerImage.parentNode.replaceChild(newNode, largerImage);
+        }
+
+        function launchAlert(){
+            alert('Image was clicked!')
+        }
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Assignment 10.3: JavaScript - Part 2</h1>
+    </header>
+
+    <div id="container">
+        <br />
+        <div>
+            <a href=# onmouseover="cave.src='jack2.png';" onmouseout="cave.src='jack1.png';" onclick="launchAlert();">
+                <img border=0 name="cave" src="jack1.png">
+            </a>
+        </div>
+        <br />
+        <div onmouseover="this.style.color='red';" onmouseout="this.style.color='black';">
+
+            Run your mouse over the image to change.
+            <br />
+
+        </div>
+        <div>
+            <a href=# onmouseover="moon.src='hades2.jpeg';" onmouseout="moon.src='hades1.jpeg';" onclick="launchAlert();">
+                <img border=0 name="moon" src="hades1.jpeg">
+            </a>
+        </div>
+        <br />
+        <div onmouseover="this.style.color='red';" onmouseout="this.style.color='black';">
+
+            <p>Run your mouse over the image to change.</p>
+            <br />
+
+        </div>
+    </div>
+</body>
+
+</html>
